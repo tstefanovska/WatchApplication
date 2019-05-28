@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkGray"
+    tools:context=".Activities.SingleShowActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/container_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_layout" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/container_toolbar">
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10sp"
+            android:textSize="25sp"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:id="@+id/imageShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_size"
+
+            android:layout_below="@+id/textViewName"/>
+
+
+        <TextView
+            android:id="@+id/textViewGenres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewName"
+            android:layout_toEndOf="@+id/imageShow"
+            android:layout_alignTop="@id/imageShow"
+            android:layout_marginTop="@dimen/padding_size"
+            android:textStyle="italic"
+            android:padding="10sp"/>
+    <TextView
+        android:id="@+id/textViewNumSeasons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewGenres"
+        android:layout_toEndOf="@+id/imageShow"
+        android:padding="10sp" />
+    <TextView
+        android:id="@+id/textViewCreated"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewNumSeasons"
+        android:layout_toEndOf="@+id/imageShow"
+        android:padding="10sp" />
+    <TextView
+        android:id="@+id/textViewFirstAirDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewCreated"
+        android:layout_toEndOf="@+id/imageShow"
+        android:padding="10sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewHorizontalSeasons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_size"
+            android:layout_below="@+id/imageShow" />
+
+        <Button
+            android:id="@+id/btnOriginCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/show_origin_country"
+            android:layout_below="@+id/recyclerViewHorizontalSeasons"/>
+
+
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
