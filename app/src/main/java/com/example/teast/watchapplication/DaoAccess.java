@@ -25,7 +25,7 @@ public interface DaoAccess {
 
     @Query("SELECT * FROM user_table WHERE userName =:name")
     User getUser(String name);
-
+fffffff
 
     @Update
     void updateUser(User user);
